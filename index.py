@@ -11,3 +11,9 @@ ranking = {}
 for i, n in enumerate(num):
     ranking[n.text] = word[i].text
 print(ranking)
+
+f = open("새파일.txt", 'w')
+for key in ranking:
+    data = "{0}{1}{2}\n".format(key, ':', ranking[key])
+    f.write(data)
+f.close()
